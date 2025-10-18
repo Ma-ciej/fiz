@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jowisz i Saturn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gazowe olbrzymy Układu Słonecznego</h1>
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab('jowisz')">Jowisz</button>
+      <button class="tab-button" onclick="openTab('saturn')">Saturn</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Jowisz -->
+    <section id="jowisz" class="tab-content active">
+      <h2>Jowisz</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jowisz">
+      <p>Jowisz to największa planeta w Układzie Słonecznym. Jest gazowym olbrzymem zbudowanym głównie z wodoru i helu.</p>
+      
+      <h3>Podstawowe właściwości:</h3>
+      <table>
+        <tr><td>Średnica</td><td>139 820 km</td></tr>
+        <tr><td>Masa</td><td>318 × Ziemia</td></tr>
+        <tr><td>Gęstość</td><td>1,33 g/cm³</td></tr>
+        <tr><td>Przyspieszenie grawitacyjne</td><td>24,79 m/s²</td></tr>
+        <tr><td>Długość dnia</td><td>9 h 55 min</td></tr>
+        <tr><td>Długość roku</td><td>11,86 lat ziemskich</td></tr>
+        <tr><td>Liczba księżyców</td><td>95+</td></tr>
+      </table>
+
+      <h3>Ciekawostki:</h3>
+      <ul>
+        <li>Ma najszybszą rotację – dzień trwa ok. 10 godzin.</li>
+        <li>Wielka Czerwona Plama – gigantyczny huragan większy od Ziemi.</li>
+        <li>Działa jak tarcza ochronna Ziemi, przyciągając asteroidy.</li>
+      </ul>
+    </section>
+
+    <!-- Saturn -->
+    <section id="saturn" class="tab-content">
+      <h2>Saturn</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
+      <p>Saturn jest znany z olśniewających pierścieni i jest drugim co do wielkości gazowym olbrzymem Układu Słonecznego.</p>
+
+      <h3>Podstawowe właściwości:</h3>
+      <table>
+        <tr><td>Średnica</td><td>116 460 km</td></tr>
+        <tr><td>Masa</td><td>95 × Ziemia</td></tr>
+        <tr><td>Gęstość</td><td>0,69 g/cm³</td></tr>
+        <tr><td>Przyspieszenie grawitacyjne</td><td>10,44 m/s²</td></tr>
+        <tr><td>Długość dnia</td><td>10 h 33 min</td></tr>
+        <tr><td>Długość roku</td><td>29,5 lat ziemskich</td></tr>
+        <tr><td>Liczba księżyców</td><td>145+</td></tr>
+      </table>
+
+      <h3>Ciekawostki:</h3>
+      <ul>
+        <li>Ma najmniejszą gęstość w Układzie Słonecznym – pływałby w wodzie!</li>
+        <li>Deszcz diamentów w atmosferze (węgiel pod ciśnieniem).</li>
+        <li>Najbardziej znane księżyce: Tytan i Enceladus – kandydaci do istnienia życia.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function openTab(tabName) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabName).classList.add('active');
+      document.querySelector(.tab-button[onclick="openTab('${tabName}')"]).classList.add('active');
+
+      // Animacja koloru nagłówka
+      const header = document.querySelector('header h1');
+      header.style.color = tabName === 'jowisz' ? '#ff9900' : '#ffd700';
+    }
+  </script>
+</body>
+</html>
